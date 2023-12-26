@@ -1,0 +1,44 @@
+.header{
+  color: var(--second-color);
+  padding: 27px 0;
+}
+.header__container{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+}
+.header__logo{
+  justify-self: start;
+}
+.header__navigation{
+  justify-self: center;
+}
+.header__consultation{
+  justify-self: end;
+
+  padding: 14px 36px;
+  border-radius: 10px;
+  background-color: #E5AB39;  
+  background-color: var(--trigger-color);  
+
+  color: var(--main-color);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.72px;  
+
+  border: 0;
+  box-shadow: 0px 2px 6px 0px rgba(2, 67, 52, 0.0);
+  transition-property: background-color, box-shadow, outline-color;
+  transition-duration: .3s;
+  transition-timing-function: ease-in-out;
+}
+.header__consultation:hover{ /* при наведении */
+  background-color: var(--main-bg-color);
+}
+.header__consultation:active{/* когда кликаем */
+  background-color: var(--main-bg-color);
+  box-shadow: 0px 2px 6px 0px rgba(2, 67, 52, 0.36);
+}
+.header__consultation:focus{/* когда тут фокус */
+  outline-color: var(--second-color);
+}
