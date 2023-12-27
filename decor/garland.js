@@ -69,7 +69,7 @@ const garlandInit = () =>{
 }
 
 function startSound() {
-  if(isLocal) return
+  if(typeof(isLocal) !== 'undefined' && isLocal) return
   myAudio.src = "./decor/Bobby-Helms.mp3";
   // myAudio.src = "./decor/jingle-bells.mp3";
   myAudio.currentTime = 7;
