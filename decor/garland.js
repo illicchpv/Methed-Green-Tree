@@ -68,13 +68,21 @@ const garlandInit = () =>{
   startSound()
 }
 
+let inPlay = false
 document.addEventListener('click', startSound);
-function startSound() {
+function startSound(e) {
   if(typeof(isLocal) !== 'undefined' && isLocal) return
-  myAudio.src = "./decor/Bobby-Helms.mp3";
-  // myAudio.src = "./decor/jingle-bells.mp3";
-  myAudio.currentTime = 7;
-  document.getElementById('myAudio').play();
-  // myAudio.pause();
+  if(e && e.target && e.target.id === 'header'){
+    if(inPlay){
+      myAudio.pause();
+      inPlay = false
+      return
+    }
+    myAudio.src = "./decor/Bobby-Helms.mp3";
+    // myAudio.src = "./decor/jingle-bells.mp3";
+    myAudio.currentTime = 7;
+    document.getElementById('myAudio').play();
+    inPlay = true
+  }
 }
 garlandInit()
