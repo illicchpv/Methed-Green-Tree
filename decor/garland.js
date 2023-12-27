@@ -7,7 +7,7 @@ const garlandInit = () =>{
   garland.className = 'garland garland_1'
   const myAudio= document.createElement('audio')
   myAudio.id = "myAudio"
-  myAudio.setAttribute("autoplay", "");
+  myAudio.setAttribute("NOautoplay", "");
   myAudio.setAttribute("NOcontrols", "");
   myAudio.setAttribute("NOloop", "");
   myAudio.innerHTML = `
@@ -68,6 +68,7 @@ const garlandInit = () =>{
   startSound()
 }
 
+document.addEventListener('click', startSound);
 function startSound() {
   if(typeof(isLocal) !== 'undefined' && isLocal) return
   myAudio.src = "./decor/Bobby-Helms.mp3";
