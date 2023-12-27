@@ -2,6 +2,14 @@
   width: 164px;
   height: 76px;  
   color: var(--main-bg-color);
+  @media (max-width: 1200px){
+    width: 115px;
+    height: 55px;  
+  }  
+  @media (max-width: 580px){
+    width: 73px;
+    height: 35px;  
+  }  
 }
 .logo__second{
   color: var(--main-color);

@@ -69,9 +69,32 @@ h2{
 }
 
 .container{
-  max-width: 1290px;
+  max-width: 1390px;
+  padding: 0 50px;
   margin: 0 auto;
+  @media (max-width: 1440px){
+    padding: 0 42px;
+  }  
+  @media (max-width: 580px){
+    padding: 0 10px;
+  }  
 }
 .hide{
   display: none;
+}
+
+@media (max-width: 1440px){
+
+}
+@media (max-width: 1200px){
+
+}
+@media (max-width: 1000px){
+
+}
+@media (max-width: 760px){
+
+}
+@media (max-width: 580px){
+
 }
