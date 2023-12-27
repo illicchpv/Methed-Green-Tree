@@ -7,7 +7,7 @@ const garlandInit = () =>{
   garland.className = 'garland garland_1'
   const myAudio= document.createElement('audio')
   myAudio.id = "myAudio"
-  myAudio.setAttribute("NOautoplay", "");
+  myAudio.setAttribute("autoplay", "");
   myAudio.setAttribute("NOcontrols", "");
   myAudio.setAttribute("NOloop", "");
   myAudio.innerHTML = `
