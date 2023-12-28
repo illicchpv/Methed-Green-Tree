@@ -70,7 +70,7 @@ const garlandInit = () =>{
 
 let inPlay = false
 document.addEventListener('click', startSound);
-document.addEventListener('mouseenter', playSound);
+// document.addEventListener('mouseenter', playSound);
 function startSound(e) {
   if(typeof(isLocal) !== 'undefined' && isLocal) return
   if(e && e.target && e.target.id === 'header'){
@@ -86,19 +86,19 @@ function startSound(e) {
     inPlay = true
   }
 }
-let playSoundCnt = 0
-function playSound(on){
-  if(playSoundCnt > 0) return
-  playSoundCnt++
-  if(on){
-    myAudio.src = "./garland/Bobby-Helms.mp3";
-    // myAudio.src = "./garland/jingle-bells.mp3";
-    myAudio.currentTime = 7;
-    document.getElementById('myAudio').play();
-    inPlay = true
-  }else{
-    myAudio.pause();
-    inPlay = false
-  }
-}
+// let playSoundCnt = 0
+// function playSound(on){
+//   if(playSoundCnt > 0) return
+//   playSoundCnt++
+//   if(on){
+//     myAudio.src = "./garland/Bobby-Helms.mp3";
+//     // myAudio.src = "./garland/jingle-bells.mp3";
+//     myAudio.currentTime = 7;
+//     document.getElementById('myAudio').play();
+//     inPlay = true
+//   }else{
+//     myAudio.pause();
+//     inPlay = false
+//   }
+// }
 garlandInit()
