@@ -4,7 +4,7 @@ body{
 .garland-elka{
   position: fixed;
   inset: 0;
-  background-image: url('./decor/elka.png');
+  background-image: url('./garland/elka.png');
   background-repeat: no-repeat;
   pointer-events: none;
   z-index: 400;
@@ -15,7 +15,7 @@ body{
   left: 0;
   right: 0;
   height: 36px;
-  background-image: url('./decor/christmas.png');
+  background-image: url('./garland/christmas.png');
   pointer-events: none;
   z-index: 399;
 }

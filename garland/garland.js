@@ -11,7 +11,7 @@ const garlandInit = () =>{
   myAudio.setAttribute("NOcontrols", "");
   myAudio.setAttribute("NOloop", "");
   myAudio.innerHTML = `
-  <source src="./decor/Bobby-Helms.mp3" type="audio/mpeg">
+  <source src="./garland/Bobby-Helms.mp3" type="audio/mpeg">
 `
   document.head.append(style)
   document.body.append(elka, garland, myAudio)
@@ -24,7 +24,7 @@ const garlandInit = () =>{
   .garland-elka{
     position: fixed;
     inset: 0;
-    background-image: url('./decor/elka.png');
+    background-image: url('./garland/elka.png');
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 400;
@@ -35,7 +35,7 @@ const garlandInit = () =>{
     left: 0;
     right: 0;
     height: 36px;
-    background-image: url('./decor/christmas.png');
+    background-image: url('./garland/christmas.png');
     pointer-events: none;
     z-index: 399;
   }
@@ -70,19 +70,36 @@ const garlandInit = () =>{
 
 let inPlay = false
 document.addEventListener('click', startSound);
+document.addEventListener('mouseenter', playSound);
 function startSound(e) {
   if(typeof(isLocal) !== 'undefined' && isLocal) return
+  console.log('e.target: ', e.target);
   if(e && e.target && e.target.id === 'header'){
     if(inPlay){
       myAudio.pause();
       inPlay = false
       return
     }
-    myAudio.src = "./decor/Bobby-Helms.mp3";
-    // myAudio.src = "./decor/jingle-bells.mp3";
+    myAudio.src = "./garland/Bobby-Helms.mp3";
+    // myAudio.src = "./garland/jingle-bells.mp3";
     myAudio.currentTime = 7;
     document.getElementById('myAudio').play();
     inPlay = true
   }
 }
-// garlandInit()
+let playSoundCnt = 0
+function playSound(on){
+  if(playSoundCnt > 0) return
+  playSoundCnt++
+  if(on){
+    myAudio.src = "./garland/Bobby-Helms.mp3";
+    // myAudio.src = "./garland/jingle-bells.mp3";
+    myAudio.currentTime = 7;
+    document.getElementById('myAudio').play();
+    inPlay = true
+  }else{
+    myAudio.pause();
+    inPlay = false
+  }
+}
+garlandInit()

@@ -1,0 +1,24 @@
+body{
+  position: relative;
+}
+.snow{
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  top: -20px;
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+  animation-name: fall;
+  animation-timing-function: linear;
+}
+@keyframes fall{
+  100%{
+    transform: translate(100vh);
+  }
+}
+.tmp{
+  left: 50%;
+  background-image: url(./snow/snowflake1.svg);
+  animation-duration: 1000ms;
+}
