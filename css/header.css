@@ -58,8 +58,8 @@
 
   border: 0;
   box-shadow: 0px 2px 6px 0px rgba(2, 67, 52, 0.0);
-  transition-property: background-color, box-shadow, outline-color;
-  transition-duration: .3s;
+  transition-property: background-color, box-shadow, outline-color, transform;
+  transition-duration: .3s, .3s;
   transition-timing-function: ease-in-out;
   /*  */
   @media (max-width: 1440px){
@@ -85,7 +85,13 @@
 .header__consultation:active{/* когда кликаем */
   background-color: var(--main-bg-color);
   box-shadow: 0px 2px 6px 0px rgba(2, 67, 52, 0.36);
+  transform: translate(2px, 2px);
 }
 .header__consultation:focus{/* когда тут фокус */
+  outline-color: var(--second-color);
+}
+.header__consultation:focus-visible{/* ? когда тут фокус */
+  outline: 2px solid var(--second-color);
+  outline-offset: -2px;
   outline-color: var(--second-color);
 }
