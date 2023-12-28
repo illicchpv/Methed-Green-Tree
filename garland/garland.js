@@ -73,7 +73,6 @@ document.addEventListener('click', startSound);
 document.addEventListener('mouseenter', playSound);
 function startSound(e) {
   if(typeof(isLocal) !== 'undefined' && isLocal) return
-  console.log('e.target: ', e.target);
   if(e && e.target && e.target.id === 'header'){
     if(inPlay){
       myAudio.pause();
