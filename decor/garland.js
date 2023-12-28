@@ -85,4 +85,4 @@ function startSound(e) {
     inPlay = true
   }
 }
-garlandInit()
+// garlandInit()
