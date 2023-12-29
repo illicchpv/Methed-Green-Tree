@@ -10,6 +10,7 @@
 
 html{
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::after, *::before{
@@ -51,7 +52,7 @@ h1,h2,h3,p{
 h1, h2{
   font-family: Cormorant, serif; /* фонт с засечками */
   font-weight: 700;
-  color: var(--main-color);
+  /* color: var(--main-color); */
 }
 h1{
   line-height: 1;
@@ -106,3 +107,4 @@ h2{
 @media (max-width: 580px){
 
 }
+

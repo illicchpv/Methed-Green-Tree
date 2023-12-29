@@ -28,6 +28,9 @@ const garlandInit = () =>{
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: 400;
+    @media (max-width: 1000px){
+      display: none;
+    }      
   }
   .garland{
     position: fixed;

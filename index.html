@@ -39,11 +39,15 @@
   <link rel="stylesheet" href="./css/pay.css">
   <link rel="stylesheet" href="./css/option-pay.css">
   <link rel="stylesheet" href="./css/footer.css">
+  <link rel="stylesheet" href="./css/overlay.css">
+  <link rel="stylesheet" href="./css/modal.css">
 
   <script>var isLocal = false;</script>
   <script src="./isLocal.js" defer></script>
   <script src="./garland/garland.js" defer></script>
   <script src="./snow/snow.js" defer></script>
+  <script src="./js/buger.js" defer></script>
+  <script src="./js/modal.js" defer></script>
 
 </head>
 <body>
@@ -92,10 +96,10 @@
 
       <nav class="header__navigation navigation"> <!-- navigation_active -->
         <ul class="navigation__list">
-          <li class="navigation__item"><a class="navigation__link" href="">Пихта Фразера</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="">Русская ель</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="">Сибирская пихта</a></li>
-          <li class="navigation__item"><a class="navigation__link" href="">Как оплатить?</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#tree1">Пихта Фразера</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#tree2">Русская ель</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#tree3">Сибирская пихта</a></li>
+          <li class="navigation__item"><a class="navigation__link" href="#pay">Как оплатить?</a></li>
         </ul>
       </nav>
 
@@ -137,7 +141,7 @@
 
     </section>
 
-    <section class="product" id="one" style="display: -none;">
+    <section class="product" id="tree1" style="display: -none;">
       <div class="container product__container">
         <div class="product__content">
           <h2 class="product__title">Пихта Фразера</h2>
@@ -147,7 +151,7 @@
           <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
 
           <div class="product__button-wrapper">
-            <button class="product__button product__button_order">Заказать</button>
+            <button class="product__button product__button_order" data-order="Пихта Фразера">Заказать</button>
             <a class="product__button product__button_more" href="#">Подробнее</a>
           </div>
         </div>
@@ -156,45 +160,48 @@
 
     </section>
 
-    <section class="product" id="two" style="display: -none;">
+    <section class="product" id="tree2" style="display: -none;">
       <div class="container product__container">
         <div class="product__content">
-          <h2 class="product__title">Пихта Фразера</h2>
+          <h2 class="product__title">Русская ель</h2>
 
-          <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+          <p class="product__features">Русская ель — наиболее традиционная разновидность рождественских деревьев, которую можно встретить 
+            в большинстве советских фильмов про новый год</p>
 
-          <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
+          <p class="product__description">Отличительной особенностью русской ёлки являются выраженный хвойный запах, короткие колючие иголки и сравнительно менее пышная крона</p>
 
           <div class="product__button-wrapper">
-            <button class="product__button product__button_order">Заказать</button>
+            <button class="product__button product__button_order" data-order="Русская ель">Заказать</button>
             <a class="product__button product__button_more" href="#">Подробнее</a>
           </div>
         </div>
-        <img class="product__picture" src="./img/tree1.jpg" width="630" height="590" alt="Пихта Фразера">
+        <img class="product__picture" src="./img/tree2.jpg" width="630" height="590" alt="Пихта Фразера">
       </div>
 
     </section>
 
-    <section class="product" id="three" style="display: -none;">
+    <section class="product" id="tree3" style="display: -none;">
       <div class="container product__container">
         <div class="product__content">
-          <h2 class="product__title">Пихта Фразера</h2>
+          <h2 class="product__title">Сибирская пихта</h2>
 
-          <p class="product__features">Пихта Фразера чаще использовалась в качестве рождественской ёлки Белого дома</p>
+          <p class="product__features">Пихта сибирская является одной из самых красивых 
+            и ароматных хвойных пород и ее часто можно встретить в парках и садах</p>
 
-          <p class="product__description">Мягкий аромат, форма, и способность сохранять мягкие иголки в течение длительного времени, делают её одним из лучших деревьев для рождества</p>
+          <p class="product__description">Хвоя Сибирской пихты в отличии от еловой крупнее, зеленее, совершенно 
+            не колючая и мягкая как трава</p>
 
           <div class="product__button-wrapper">
-            <button class="product__button product__button_order">Заказать</button>
+            <button class="product__button product__button_order" data-order="Сибирская пихта">Заказать</button>
             <a class="product__button product__button_more" href="#">Подробнее</a>
           </div>
         </div>
-        <img class="product__picture" src="./img/tree1.jpg" width="630" height="590" alt="Пихта Фразера">
+        <img class="product__picture" src="./img/tree3.jpg" width="630" height="590" alt="Пихта Фразера">
       </div>
 
     </section>
 
-    <section class="pay" style="display: -none;">
+    <section class="pay" id="pay" style="display: -none;">
       <div class="container">
         <h2 class="pay__title">Как можно оплатить</h2>
 
@@ -320,6 +327,63 @@
 
   </footer>
   
+  <div class="overlay overlay_order">
+    <div class="modal">
+      <button class="modal__close">
+        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"/>
+        </svg>      
+      </button>
+
+      <h2 class="modal__title">Оформить заказ</h2>
+
+      <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+        <label class="modal__label" for="">
+          <span class="modal__label-text">ФИО</span>
+          <input class="modal__input" name="bio" type="text" required placeholder="Введите ваше ФИО">
+        </label>
+
+        <label class="modal__label" for="">
+          <span class="modal__label-text">Телефон</span>
+          <input class="modal__input" name="tel" type="tel" required placeholder="Введите ваш номер телефона">
+        </label>
+
+        <input class="modal__order" name="order" type="hidden">
+
+        <button class="modal__button">Заказать звонок</button>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="overlay overlay_consultation">
+    <div class="modal">
+      <button class="modal__close">
+        <svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14 1.41L12.59 0L7 5.59L1.41 0L0 1.41L5.59 7L0 12.59L1.41 14L7 8.41L12.59 14L14 12.59L8.41 7L14 1.41Z" fill="currentColor"/>
+        </svg>      
+      </button>
+
+      <h2 class="modal__title">Заказать консультацию</h2>
+
+      <form class="modal__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
+        <label class="modal__label" for="">
+          <span class="modal__label-text">ФИО</span>
+          <input class="modal__input" name="bio" type="text" required placeholder="Введите ваше ФИО">
+        </label>
+
+        <label class="modal__label" for="">
+          <span class="modal__label-text">Телефон</span>
+          <input class="modal__input" name="tel" type="tel" required placeholder="Введите ваш номер телефона">
+        </label>
+
+        <!-- <input class="modal__consultation" name="order" type="hidden"> -->
+
+        <button class="modal__button">Заказать звонок</button>
+      </form>
+    </div>
+
+  </div>
 
   <svg class="hide">
     <symbol id="logo" width="164" height="76" fill="none" xmlns="http://www.w3.org/2000/svg">
